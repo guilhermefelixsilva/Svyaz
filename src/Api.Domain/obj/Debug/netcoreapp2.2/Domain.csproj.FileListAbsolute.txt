@@ -15,3 +15,4 @@ C:\Users\ExpandFlow - Dados\Desktop\Odoo_ASASAAS_SVYAZ\Svyaz\src\Api.Domain\obj\
 C:\Users\ExpandFlow - Dados\Desktop\Odoo_ASASAAS_SVYAZ\Svyaz\src\Api.Domain\obj\Debug\netcoreapp2.2\Domain.AssemblyInfo.cs
 C:\Users\ExpandFlow - Dados\Desktop\Odoo_ASASAAS_SVYAZ\Svyaz\src\Api.Domain\obj\Debug\netcoreapp2.2\Domain.dll
 C:\Users\ExpandFlow - Dados\Desktop\Odoo_ASASAAS_SVYAZ\Svyaz\src\Api.Domain\obj\Debug\netcoreapp2.2\Domain.pdb
+C:\Users\ExpandFlow - Dados\Desktop\Odoo_ASASAAS_SVYAZ\Svyaz\src\Api.Domain\obj\Debug\netcoreapp2.2\Domain.csprojAssemblyReference.cache
