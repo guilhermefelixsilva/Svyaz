@@ -2,6 +2,7 @@ using System;
 using System.Net;
 using System.Threading.Tasks;
 using Api.Domain.Entities;
+using Api.Domain.Interfaces.Services.Manager;
 using Api.Domain.Interfaces.Services.User;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,10 +11,10 @@ namespace Api.Application.Controllers
 
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class ManagerController : ControllerBase
     {
-        private IUserService _service;
-        public UsersController(IUserService service)
+        private IManagerService _service;
+        public ManagerController(IManagerService service)
         {
             _service = service;
         }
@@ -37,9 +38,8 @@ namespace Api.Application.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-
         [HttpGet]
-        [Route("{id}", Name = "GetUserWithId")]
+        [Route("{id}", Name = "GetManagerWithId")]
         public async Task<ActionResult> Get(Guid id)
         {
             if (!ModelState.IsValid)
@@ -59,7 +59,7 @@ namespace Api.Application.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] UserEntity user)
+        public async Task<ActionResult> Post([FromBody] ManagerEntity manager)
         {
             if (!ModelState.IsValid)
             {
@@ -69,10 +69,10 @@ namespace Api.Application.Controllers
             try
             {
 
-                var result = await _service.Post(user);
+                var result = await _service.Post(manager);
                 if (result != null)
                 {
-                    return Created(new Uri(Url.Link("GetWithId", new { id = result.Id })), result);
+                    return Created(new Uri(Url.Link("GetManagerWithId", new { id = result.Id })), result);
                 }
                 else
                 {
@@ -85,9 +85,8 @@ namespace Api.Application.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-
         [HttpPut]
-        public async Task<ActionResult> Put([FromBody] UserEntity user)
+        public async Task<ActionResult> Put([FromBody] ManagerEntity manager)
         {
             if (!ModelState.IsValid)
             {
@@ -96,7 +95,7 @@ namespace Api.Application.Controllers
 
             try
             {
-                var result = await _service.Put(user);
+                var result = await _service.Put(manager);
                 if (result != null)
                 {
                     return Ok(result);
@@ -112,7 +111,6 @@ namespace Api.Application.Controllers
                 return StatusCode((int)HttpStatusCode.InternalServerError, e.Message);
             }
         }
-
         [HttpDelete("{id}")]
         public async Task<ActionResult> Delete(Guid id)
         {
@@ -132,4 +130,6 @@ namespace Api.Application.Controllers
 
         }
     }
+
 }
+
