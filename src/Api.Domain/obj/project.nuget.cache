@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+OUbBWLHADhLrS9C64qi0vGLDAKkC4AEfFbynZTNqS7ua8qEFIVA6gy56U7MQu/WT6kp/qhi7ZjKfvTDSq96ZQ==",
+  "dgSpecHash": "JFOExKJjH35d/8MCeCO4RFG+ENyz+d9XmmMPRzDCGN87agb2+ZqRD2WxtavahpBvmtr8iin/j8iuPIT1Svl5MA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\svyaz\\src\\Api.Domain\\Domain.csproj",
+  "projectFilePath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Domain\\Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ExpandFlow - Dados\\.nuget\\packages\\microsoft.netcore.app\\2.2.0\\microsoft.netcore.app.2.2.0.nupkg.sha512",
     "C:\\Users\\ExpandFlow - Dados\\.nuget\\packages\\microsoft.netcore.dotnetapphost\\2.2.0\\microsoft.netcore.dotnetapphost.2.2.0.nupkg.sha512",
