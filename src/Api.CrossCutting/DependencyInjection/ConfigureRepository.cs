@@ -20,7 +20,7 @@ namespace Api.CrossCutting.DependencyInjection
             //    options => options.UseSqlServer ("Server=.\\SQLEXPRESS2017;Database=dbAPI;User Id=sa;Password=mudar@123")
 
             serviceCollection.AddDbContext<MyContext>(
-                options => options.UseNpgsql("Server=localhost ;Port=5432; Database=postgres;Uid=postgres;Pwd=Senhaaa")
+                options => options.UseNpgsql("Server=localhost ;Port=5432; Database=postgres;Uid=postgres;Pwd=Toor2019")
 
             );
         }

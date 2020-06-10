@@ -5,6 +5,9 @@ using Api.Domain.Entities;
 using Api.Domain.Interfaces;
 using Api.Domain.Interfaces.Services.Manager;
 using Api.Domain.Interfaces.Services.User;
+using Api.Service.Services.Odoo.Configuration.New;
+using Api.Service.Services.Odoo.Docker.Compose.New;
+using Api.Service.Services.Odoo.Docker.Launch;
 
 namespace Api.Service.Services
 {
@@ -37,6 +40,13 @@ namespace Api.Service.Services
 
         public async Task<ManagerEntity> Put(ManagerEntity manager)
         {
+            //Odoo Configuration (Logfile & Conf)
+            Newconfiguration newconfiguration = new Newconfiguration(manager.Email.ToString());
+            //Image: apeninos / asasaas_odoo:version11.0
+            //Compose Configuration
+            Newcompose newcompose = new Newcompose(manager.Email.ToString(), manager.Crm_PORT.ToString(), "apeninos / asasaas_odoo:version11.0");
+            //New Launch
+            Newlaunch newlaunch = new Newlaunch(manager.Email.ToString());
             return await _repository2.UpdateAsync(manager);
         }
     }
