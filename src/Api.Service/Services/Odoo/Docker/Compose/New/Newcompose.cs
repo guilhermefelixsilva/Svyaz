@@ -8,7 +8,8 @@ namespace Api.Service.Services.Odoo.Docker.Compose.New
         private string customerEmail;
         private string odooPort;
         private string dockerimage;
-        private string basePath = @"c:/" + "OPENERP";
+        private string basePath = @"/Odoo";
+        private string composePath;
         public Newcompose(string CustomerEmail, string OdooPort, string DockerImage)
         {
             this.customerEmail = CustomerEmail;
@@ -21,8 +22,11 @@ namespace Api.Service.Services.Odoo.Docker.Compose.New
         }
         private void Dockercompose() //Docker-compose.yml
         {
+            composePath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail;
+            System.IO.Directory.CreateDirectory(composePath);
 
-            nomeArquivo = basePath + customerEmail + @"\docker-compose" + ".yml";
+            nomeArquivo = composePath + @"/docker-compose.yml";
+
             StreamWriter writer = new StreamWriter(nomeArquivo);
 
             writer.WriteLine("# APENINOS SOFTWARE");
