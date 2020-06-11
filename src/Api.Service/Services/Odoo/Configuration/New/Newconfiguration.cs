@@ -1,5 +1,6 @@
 using System.IO;
 
+
 namespace Api.Service.Services.Odoo.Configuration.New
 {
     public class Newconfiguration
@@ -7,7 +8,9 @@ namespace Api.Service.Services.Odoo.Configuration.New
 
         private string nomeArquivo;
         private string customerEmail;
-        private string basePath = @"\home";
+        private string basePath = @"/Odoo";
+        private string configPath;
+        private string logPath;
 
         public Newconfiguration(string CustomerEmail)
         {
@@ -20,16 +23,16 @@ namespace Api.Service.Services.Odoo.Configuration.New
 
         private void Newodooconf() //Odoo.conf
         {
-            var teste1 = System.IO.Directory.CreateDirectory(Path.GetDirectoryName(basePath));
-            var teste2 = System.IO.Directory.CreateDirectory(Path.GetPathRoot(basePath));
 
-            //System.IO.Directory.CreateDirectory(Path.GetDirectoryName(basePath + @"\" + customerEmail));
-            nomeArquivo = Path.GetFullPath(basePath + @"\" + customerEmail) + @"\odoo" + ".conf";
+            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail;
+            System.IO.Directory.CreateDirectory(configPath);
+
+            nomeArquivo = configPath + @"/odoo.conf";
+
             StreamWriter writer = new StreamWriter(nomeArquivo);
-            writer.WriteLine("[options]");
             writer.WriteLine("addons_path = /mnt/extra - addons");
             writer.WriteLine("data_dir = /var/lib/odoo");
-            writer.WriteLine("logfile = " + "C:/" + @"/LOGS/" + customerEmail + @"/odoo-server" + ".log");
+            writer.WriteLine("logfile = " + Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/Logs" + @"/odoo-server" + ".log");
             writer.WriteLine("; admin_passwd = admin");
             writer.WriteLine("; csv_internal_sep = ,");
             writer.WriteLine("; db_name = False");
@@ -61,8 +64,9 @@ namespace Api.Service.Services.Odoo.Configuration.New
 
         private void Newodooserverlog() //Odoo-server.log
         {
-            System.IO.Directory.CreateDirectory(basePath + customerEmail);
-            nomeArquivo = basePath + @"\LOGS\" + customerEmail + @"\odoo-server" + ".log";
+            logPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/Logs";
+            System.IO.Directory.CreateDirectory(logPath);
+            nomeArquivo = logPath + @"/odoo-server" + ".log";
             StreamWriter writer = new StreamWriter(nomeArquivo);
             writer.Close();
         }
