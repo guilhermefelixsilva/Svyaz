@@ -3950,11 +3950,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Service/Service.csproj",
+      "projectUniqueName": "/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/Service.csproj",
       "projectName": "Service",
-      "projectPath": "/home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Service/Service.csproj",
+      "projectPath": "/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/Service.csproj",
       "packagesPath": "/home/guilherme/.nuget/packages/",
-      "outputPath": "/home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Service/obj/",
+      "outputPath": "/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -3971,11 +3971,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "/home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Data/Data.csproj": {
-              "projectPath": "/home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Data/Data.csproj"
+            "/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Data/Data.csproj": {
+              "projectPath": "/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Data/Data.csproj"
             },
-            "/home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Domain/Domain.csproj": {
-              "projectPath": "/home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Domain/Domain.csproj"
+            "/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Domain/Domain.csproj": {
+              "projectPath": "/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Domain/Domain.csproj"
             }
           }
         }

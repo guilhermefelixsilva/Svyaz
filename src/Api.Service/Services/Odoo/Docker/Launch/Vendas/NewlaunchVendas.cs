@@ -18,7 +18,7 @@ namespace Api.Service.Services.Odoo.Docker.Launch.Vendas
 
         private void NewSAAS()
         {
-            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + "Vendas";
+            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + customerEmail + "_Vendas";
             System.IO.Directory.CreateDirectory(configPath);
 
             nomeArquivo = configPath + @"/odoo11_install" + ".sh";

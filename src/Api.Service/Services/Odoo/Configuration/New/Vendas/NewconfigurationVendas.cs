@@ -24,7 +24,7 @@ namespace Api.Service.Services.Odoo.Configuration.New.Vendas
         private void Newodooconf() //Odoo.conf
         {
 
-            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + "Vendas";
+            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + customerEmail + "_Vendas";
             System.IO.Directory.CreateDirectory(configPath);
 
             nomeArquivo = configPath + @"/odoo.conf";

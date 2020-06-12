@@ -22,7 +22,7 @@ namespace Api.Service.Services.Odoo.Docker.Compose.New.Vendas
         }
         private void Dockercompose() //Docker-compose.yml
         {
-            composePath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + "Vendas";
+            composePath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + customerEmail + "_Vendas";
             System.IO.Directory.CreateDirectory(composePath);
 
             nomeArquivo = composePath + @"/docker-compose.yml";

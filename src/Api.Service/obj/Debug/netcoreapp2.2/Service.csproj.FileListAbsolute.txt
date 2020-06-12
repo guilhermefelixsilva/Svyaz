@@ -54,3 +54,17 @@ C:/Users/ExpandFlow - Dados/Desktop/Odoo_11062020/Develop/Svyaz/src/Api.Service/
 /home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.csproj.CopyComplete
 /home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.dll
 /home/guilherme/Área de Trabalho/Odoo_11062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.pdb
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/bin/Debug/netcoreapp2.2/Service.deps.json
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/bin/Debug/netcoreapp2.2/Service.dll
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/bin/Debug/netcoreapp2.2/Service.pdb
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/bin/Debug/netcoreapp2.2/Data.dll
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/bin/Debug/netcoreapp2.2/Domain.dll
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/bin/Debug/netcoreapp2.2/Domain.pdb
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/bin/Debug/netcoreapp2.2/Data.pdb
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.csprojAssemblyReference.cache
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.csproj.CoreCompileInputs.cache
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.AssemblyInfoInputs.cache
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.AssemblyInfo.cs
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.csproj.CopyComplete
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.dll
+/home/guilherme/Área de Trabalho/odoo_12062020/Svyaz/src/Api.Service/obj/Debug/netcoreapp2.2/Service.pdb

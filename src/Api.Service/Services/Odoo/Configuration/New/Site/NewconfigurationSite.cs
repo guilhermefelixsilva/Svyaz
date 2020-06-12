@@ -24,7 +24,7 @@ namespace Api.Service.Services.Odoo.Configuration.New.Site
         private void Newodooconf() //Odoo.conf
         {
 
-            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + "Site";
+            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + customerEmail + "_Site";
             System.IO.Directory.CreateDirectory(configPath);
 
             nomeArquivo = configPath + @"/odoo.conf";
