@@ -20,8 +20,10 @@ namespace Api.Service.Services.Odoo.Configuration.New
 
         private void Newodooconf() //Odoo.conf
         {
+            var teste1 = System.IO.Directory.CreateDirectory(Path.GetDirectoryName(basePath));
+            var teste2 = System.IO.Directory.CreateDirectory(Path.GetPathRoot(basePath));
 
-            System.IO.Directory.CreateDirectory(Path.GetFullPath(basePath + @"\" + customerEmail));
+            //System.IO.Directory.CreateDirectory(Path.GetDirectoryName(basePath + @"\" + customerEmail));
             nomeArquivo = Path.GetFullPath(basePath + @"\" + customerEmail) + @"\odoo" + ".conf";
             StreamWriter writer = new StreamWriter(nomeArquivo);
             writer.WriteLine("[options]");
