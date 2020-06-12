@@ -2,15 +2,15 @@ using System;
 using System.Diagnostics;
 using System.IO;
 
-namespace Api.Service.Services.Odoo.Docker.Launch.CRM
+namespace Api.Service.Services.Odoo.Docker.Launch.Faturamento
 {
-    public class NewlaunchCRM
+    public class NewlaunchFaturamento
     {
         private string basePath = @"/Odoo";
         private string nomeArquivo;
         private string customerEmail;
         private string configPath;
-        public NewlaunchCRM(string CustomerEmail)
+        public NewlaunchFaturamento(string CustomerEmail)
         {
             this.customerEmail = CustomerEmail;
             NewSAAS();
@@ -18,7 +18,7 @@ namespace Api.Service.Services.Odoo.Docker.Launch.CRM
 
         private void NewSAAS()
         {
-            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + "CRM";
+            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + "Faturamento";
             System.IO.Directory.CreateDirectory(configPath);
 
             nomeArquivo = configPath + @"/odoo11_install" + ".sh";

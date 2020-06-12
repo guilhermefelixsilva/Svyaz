@@ -1,8 +1,8 @@
 using System.IO;
 
-namespace Api.Service.Services.Odoo.Docker.Compose.New
+namespace Api.Service.Services.Odoo.Docker.Compose.New.Vendas
 {
-    public class Newcompose
+    public class NewcomposeVendas
     {
         private string nomeArquivo;
         private string customerEmail;
@@ -10,7 +10,7 @@ namespace Api.Service.Services.Odoo.Docker.Compose.New
         private string dockerimage;
         private string basePath = @"/Odoo";
         private string composePath;
-        public Newcompose(string CustomerEmail, string OdooPort, string DockerImage)
+        public NewcomposeVendas(string CustomerEmail, string OdooPort, string DockerImage)
         {
             this.customerEmail = CustomerEmail;
             this.odooPort = ("- " + char.ConvertFromUtf32(0x0022) + OdooPort + ":8069" + char.ConvertFromUtf32(0x0022));
@@ -22,7 +22,7 @@ namespace Api.Service.Services.Odoo.Docker.Compose.New
         }
         private void Dockercompose() //Docker-compose.yml
         {
-            composePath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail;
+            composePath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + "Vendas";
             System.IO.Directory.CreateDirectory(composePath);
 
             nomeArquivo = composePath + @"/docker-compose.yml";

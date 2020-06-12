@@ -5,9 +5,18 @@ using Api.Domain.Entities;
 using Api.Domain.Interfaces;
 using Api.Domain.Interfaces.Services.Manager;
 using Api.Domain.Interfaces.Services.User;
-using Api.Service.Services.Odoo.Configuration.New;
-using Api.Service.Services.Odoo.Docker.Compose.New;
+using Api.Service.Services.Odoo.Configuration.New.CRM;
+using Api.Service.Services.Odoo.Configuration.New.Faturamento;
+using Api.Service.Services.Odoo.Configuration.New.Site;
+using Api.Service.Services.Odoo.Configuration.New.Vendas;
+using Api.Service.Services.Odoo.Docker.Compose.New.CRM;
+using Api.Service.Services.Odoo.Docker.Compose.New.Faturamento;
+using Api.Service.Services.Odoo.Docker.Compose.New.Site;
+using Api.Service.Services.Odoo.Docker.Compose.New.Vendas;
 using Api.Service.Services.Odoo.Docker.Launch.CRM;
+using Api.Service.Services.Odoo.Docker.Launch.Faturamento;
+using Api.Service.Services.Odoo.Docker.Launch.Site;
+using Api.Service.Services.Odoo.Docker.Launch.Vendas;
 
 namespace Api.Service.Services
 {
@@ -40,17 +49,64 @@ namespace Api.Service.Services
 
         public async Task<ManagerEntity> Put(ManagerEntity manager)
         {
-
+            #region CRM IMPLEMENTATION
+            //-----------------------------------------------------------
+            //New LAUNCH TO CRM MODULE
             //Odoo Configuration (Logfile & Conf)
-            Newconfiguration newconfiguration = new Newconfiguration(manager.Email.ToString());
+            NewconfigurationCRM newconfigurationCRM = new NewconfigurationCRM(manager.Email.ToString());
             //Image: apeninos / asasaas_odoo:version11.0
             //Compose Configuration
-            Newcompose newcompose = new Newcompose(manager.Email.ToString(),
+            NewcomposeCRM newcomposeCRM = new NewcomposeCRM(manager.Email.ToString(),
                                                 manager.Crm_PORT.ToString(),
                                      "apeninos/asasaas_odoo:version11.0");
             //New Launch
-            NewlaunchCRM newlaunch = new NewlaunchCRM(manager.Email.ToString());
+            NewlaunchCRM newlaunchCRM = new NewlaunchCRM(manager.Email.ToString());
+            #endregion
+
+            #region FATURAMENTO IMPLEMENTATION
+            //-----------------------------------------------------------
+            //New LAUNCH TO CRM MODULE
+            //Odoo Configuration (Logfile & Conf)
+            NewconfigurationFaturamento newconfigurationFaturamento = new NewconfigurationFaturamento(manager.Email.ToString());
+            //Image: apeninos / asasaas_odoo:version11.0
+            //Compose Configuration
+            NewcomposeFaturamento newcomposeFaturamento = new NewcomposeFaturamento(manager.Email.ToString(),
+                                                manager.Faturamento_PORT.ToString(),
+                                     "apeninos/asasaas_odoo:version11.0");
+            //New Launch
+            NewlaunchFaturamento newlaunchFaturamento = new NewlaunchFaturamento(manager.Email.ToString());
+            #endregion
+
+            #region SITE IMPLEMENTATION
+            //-----------------------------------------------------------
+            //New LAUNCH TO CRM MODULE
+            //Odoo Configuration (Logfile & Conf)
+            NewconfigurationSite newconfigurationSite = new NewconfigurationSite(manager.Email.ToString());
+            //Image: apeninos / asasaas_odoo:version11.0
+            //Compose Configuration
+            NewcomposeSite newcomposeSite = new NewcomposeSite(manager.Email.ToString(),
+                                                manager.Site_PORT.ToString(),
+                                     "apeninos/asasaas_odoo:version11.0");
+            //New Launch
+            NewlaunchSite newlaunchSite = new NewlaunchSite(manager.Email.ToString());
+            #endregion
+
+            #region VENDAS IMPLEMENTATION
+            //-----------------------------------------------------------
+            //New LAUNCH TO CRM MODULE
+            //Odoo Configuration (Logfile & Conf)
+            NewconfigurationVendas newconfigurationVendas = new NewconfigurationVendas(manager.Email.ToString());
+            //Image: apeninos / asasaas_odoo:version11.0
+            //Compose Configuration
+            NewcomposeVendas newcomposeVendas = new NewcomposeVendas(manager.Email.ToString(),
+                                                manager.Vendas_PORT.ToString(),
+                                     "apeninos/asasaas_odoo:version11.0");
+            //New Launch
+            NewlaunchVendas newlaunchVendas = new NewlaunchVendas(manager.Email.ToString());
+            #endregion
+
             return await _repository2.UpdateAsync(manager);
+
         }
     }
 }
