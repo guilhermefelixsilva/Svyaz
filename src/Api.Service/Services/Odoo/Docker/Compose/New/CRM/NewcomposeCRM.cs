@@ -10,11 +10,12 @@ namespace Api.Service.Services.Odoo.Docker.Compose.New.CRM
         private string dockerimage;
         private string basePath = @"/Odoo";
         private string composePath;
-        public NewcomposeCRM(string CustomerEmail, string OdooPort, string DockerImage)
+        private string customerTag;
+        public NewcomposeCRM(string CustomerEmail, string OdooPort, string DockerImage, string CustomerTag)
         {
             this.customerEmail = CustomerEmail;
             this.odooPort = ("- " + char.ConvertFromUtf32(0x0022) + OdooPort + ":8069" + char.ConvertFromUtf32(0x0022));
-
+            this.customerTag = CustomerTag;
             this.dockerimage = DockerImage;
             //Docker-compose.yml
             Dockercompose();
@@ -22,7 +23,7 @@ namespace Api.Service.Services.Odoo.Docker.Compose.New.CRM
         }
         private void Dockercompose() //Docker-compose.yml
         {
-            composePath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + customerEmail + "_CRM";
+            composePath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/CRM/" + customerEmail + "_" + customerTag;
             System.IO.Directory.CreateDirectory(composePath);
 
             nomeArquivo = composePath + @"/docker-compose.yml";
@@ -43,7 +44,7 @@ namespace Api.Service.Services.Odoo.Docker.Compose.New.CRM
             writer.WriteLine("      - db");
             writer.WriteLine("    ports:");
             writer.WriteLine("      " + odooPort);
-            writer.WriteLine("    tty: true");
+            writer.WriteLine("    tty: false");
             writer.WriteLine("    command: -- --dev=reload");
             writer.WriteLine("#    command: odoo scaffold /mnt/extra-addons/test_module");
             writer.WriteLine("    volumes:");

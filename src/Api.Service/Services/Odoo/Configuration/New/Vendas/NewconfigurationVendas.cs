@@ -8,13 +8,15 @@ namespace Api.Service.Services.Odoo.Configuration.New.Vendas
 
         private string nomeArquivo;
         private string customerEmail;
+        private string customerTag;
         private string basePath = @"/Odoo";
         private string configPath;
         private string logPath;
 
-        public NewconfigurationVendas(string CustomerEmail)
+        public NewconfigurationVendas(string CustomerEmail, string CustomerTag)
         {
             this.customerEmail = CustomerEmail;
+            this.customerTag = CustomerTag;
             //Odoo.conf
             Newodooconf();
             //Odoo-server.log
@@ -24,7 +26,7 @@ namespace Api.Service.Services.Odoo.Configuration.New.Vendas
         private void Newodooconf() //Odoo.conf
         {
 
-            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + customerEmail + "_Vendas";
+            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/VENDAS/" + customerEmail + "_" + customerTag;
             System.IO.Directory.CreateDirectory(configPath);
 
             nomeArquivo = configPath + @"/odoo.conf";

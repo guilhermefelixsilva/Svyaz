@@ -10,15 +10,17 @@ namespace Api.Service.Services.Odoo.Docker.Launch.Vendas
         private string nomeArquivo;
         private string customerEmail;
         private string configPath;
-        public NewlaunchVendas(string CustomerEmail)
+        private string customerTag;
+        public NewlaunchVendas(string CustomerEmail, string CustomerTag)
         {
             this.customerEmail = CustomerEmail;
+            this.customerTag = CustomerTag;
             NewSAAS();
         }
 
         private void NewSAAS()
         {
-            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/" + customerEmail + "_Vendas";
+            configPath = Path.GetFullPath(basePath).Substring(0, 5) + @"/" + customerEmail + @"/VENDAS/" + customerEmail + "_" + customerTag;
             System.IO.Directory.CreateDirectory(configPath);
 
             nomeArquivo = configPath + @"/odoo11_install" + ".sh";

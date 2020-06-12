@@ -11,7 +11,7 @@ namespace Api.Data.Mapping
             builder.ToTable("Manager");
 
             builder.HasKey(p => p.Id);
-            builder.HasIndex(p => p.Email).IsUnique();
+            builder.HasIndex(p => p.Email);
             builder.HasIndex(p => p.Crm_IPV4);
             builder.HasIndex(p => p.Vendas_IPV4);
             builder.HasIndex(p => p.Faturamento_IPV4);
