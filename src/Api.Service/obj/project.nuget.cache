@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "quJsiv98SfZlKH/N2P8j7/l20HYatbBhnUZIklwsziLhj6CwcmIllVFsBaE9ScdlzwNFyfYVMwN+5dAX5BEtOg==",
+  "dgSpecHash": "zz3+613Vn1scRPOCCCJNAB47Rjm29Yt/yLzN962+yPezWkn+GUWIp7+2OebKdU+sLi8DRpaGDx3RvcsaM262vw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Service\\Service.csproj",
+  "projectFilePath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.Service\\Service.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\ExpandFlow - Dados\\.nuget\\packages\\microsoft.entityframeworkcore\\2.2.6\\microsoft.entityframeworkcore.2.2.6.nupkg.sha512",

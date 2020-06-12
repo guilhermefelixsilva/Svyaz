@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GHpiVS92eVrQTtjhRhbdw26of98XXVEEuCb6+hICJXPKv47DtDbaEv8cUgjXUCpIBJgrl5HkpKQDbcsLu8D5DA==",
+  "dgSpecHash": "3hwDZ4/8SNZ0r6VG02OmOCNiQyfV5gqoBtQ8QyGX9UARofgdPGD5B1cOCCLTGb4AtFUp37hPt/YQebjRnqjAsw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.CrossCutting\\CrossCutting.csproj",
+  "projectFilePath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.CrossCutting\\CrossCutting.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ExpandFlow - Dados\\.nuget\\packages\\automapper\\8.1.1\\automapper.8.1.1.nupkg.sha512",
     "C:\\Users\\ExpandFlow - Dados\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\6.1.1\\automapper.extensions.microsoft.dependencyinjection.6.1.1.nupkg.sha512",

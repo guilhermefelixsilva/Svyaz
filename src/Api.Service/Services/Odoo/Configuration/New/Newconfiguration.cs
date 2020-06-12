@@ -7,7 +7,7 @@ namespace Api.Service.Services.Odoo.Configuration.New
 
         private string nomeArquivo;
         private string customerEmail;
-        private string basePath = @"c:\" + "OPENERP";
+        private string basePath = @"\home";
 
         public Newconfiguration(string CustomerEmail)
         {
@@ -21,8 +21,8 @@ namespace Api.Service.Services.Odoo.Configuration.New
         private void Newodooconf() //Odoo.conf
         {
 
-            System.IO.Directory.CreateDirectory(basePath + @"\" + customerEmail);
-            nomeArquivo = basePath + @"\" + customerEmail + @"\odoo" + ".conf";
+            System.IO.Directory.CreateDirectory(Path.GetFullPath(basePath + @"\" + customerEmail));
+            nomeArquivo = Path.GetFullPath(basePath + @"\" + customerEmail) + @"\odoo" + ".conf";
             StreamWriter writer = new StreamWriter(nomeArquivo);
             writer.WriteLine("[options]");
             writer.WriteLine("addons_path = /mnt/extra - addons");

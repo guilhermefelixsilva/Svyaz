@@ -3950,11 +3950,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Service\\Service.csproj",
+      "projectUniqueName": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.Service\\Service.csproj",
       "projectName": "Service",
-      "projectPath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Service\\Service.csproj",
+      "projectPath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.Service\\Service.csproj",
       "packagesPath": "C:\\Users\\ExpandFlow - Dados\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Service\\obj\\",
+      "outputPath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.Service\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3973,11 +3973,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Data\\Data.csproj": {
-              "projectPath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Data\\Data.csproj"
+            "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.Data\\Data.csproj": {
+              "projectPath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.Data\\Data.csproj"
             },
-            "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_ASASAAS_SVYAZ\\Svyaz\\src\\Api.Domain\\Domain.csproj"
+            "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\ExpandFlow - Dados\\Desktop\\Odoo_11062020\\Develop\\Svyaz\\src\\Api.Domain\\Domain.csproj"
             }
           }
         }
